@@ -1,0 +1,95 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Calorie and Macro Calculator</title>
+ <link rel="stylesheet" href="styles.css">
+  </head>
+<body>
+    <header>
+        <h1 class="bubble-header">Daily Calorie and Macro Calculator</h1>
+    </header>
+    <main>
+      <form class="form-container">
+            <div class="form-content">
+                <div class="image-section">
+                    <img src="https://www.eatingwell.com/thmb/88kXg2QcY_xn2-qOOiIbH-B5W_I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/What-Are-Calories-and-How-Many-Do-You-Need-2c7a044cb4d942d199f270239b02e9da.jpg" alt="Calories" class="center">
+                </div>
+<div><h3 id ="enter-details">Please enter the following details:</h3>
+  <p>
+<div class="form-group">
+                    Age: <input id="age" class="resized-textbox" placeholder="in years">
+                </div>
+                <div class="form-group">
+                    Height: <input id="height" class="resized-textbox" placeholder="in centimetres">
+                </div>
+                <div class="form-group">
+                    Weight: <input id="weight" class="resized-textbox" placeholder="in kilograms">
+                </div>
+                <div class="form-group">
+                    Gender:
+                    <select class="select-box" id="gender" onchange="bmrFunction()">
+                        <option disabled selected value>Please select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+              <div class="form-group">
+                    Activity Level:
+                    <select class="select-box" id="activityLevel" onchange="activityLevelFunction()">
+                        <option disabled selected value>Please select</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="lightly active">Lightly Active</option>
+                        <option value="active">Active</option>
+                        <option value="highly active">Highly Active</option>
+                        <option value="athlete">Athlete</option>
+                    </select>
+                </div>
+               <div class="form-group">
+                    Weight Goal:
+                    <select class="select-box" id="weightGoal" onchange="weightGoalFunction()">
+                        <option disabled selected value>Please select</option>
+                        <option value="gain weight">Gain Weight</option>
+                        <option value="maintain weight">Maintain Weight</option>
+                        <option value="lose weight">Lose Weight</option>
+                    </select>
+              </div>
+               <div class="form-group">
+                    Body Type:
+                    <select class="select-box" id="bodyType">
+                        <option disabled selected value>Please select</option>
+                        <option value="ectomorph">Ectomorph - skinny and narrow-framed</option>
+                        <option value="mesomorph">Mesomorph - athletic and muscular</option>
+                        <option value="endomorph">Endomorph - larger frame</option>
+                    </select>
+                </div>
+        <div id="message"></div>
+  <p>
+    <button type="button" class="button" onclick=macroCalculator(),remainingMacros()>Calculate calories and macros</button>
+  </p>
+</div>
+</div>
+      </form>
+
+<!-- new part -->
+<table id="macros" class="macros-table"></table>
+
+<table id="foodList" class="food-items-table">
+  <tr>
+  <th>Food Item</th>
+  <th>Quantity</th>
+  <th>Calories</th>
+  <th>Carbohydrates</th>
+  <th>Protein</th>
+  <th>Fat</th>
+  </tr>
+</table>
+
+<div>
+<h3>Please select the item you wish to add:</h3>
+  Item: <body onload="foodSelect()"/>
+  <select id="foodItem" class="select-box">
+  <option disabled selected value>Please select</option>
+  </select>
+  <p>Quantity: <input id="foodWeight" class="resized-textbox" placeholder="in grams"/>
+  <p><button type="button" class="button" onclick="nutritionCalculator(),sumFunction(),remainingMacros()">Add item</button>
+  </p></div>

@@ -1,0 +1,116 @@
+:root {
+    --background-color: #F8D90C;
+    --text-color: #FFFFFF;
+    --primary-color: #F8D90C;
+    --secondary-color: #FFFFFF;
+    --accent-color: #FF6F61;
+    --font-family: 'Helvetica', sans-serif;
+    --border-radius: 8px;
+}
+/* Base Styles */
+body {
+    background-color: var(--background-color);
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.05) 50%, transparent 50%, transparent 50%, rgba(0, 0, 0, 0.05) 50%, rgba(0, 0, 0, 0.05) 75%, transparent 75%, transparent);
+    background-size: 20px 20px;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+header {
+    margin-bottom: 20px;
+}
+h1.bubble-header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 0;
+    font-size: 1.5em;
+  border: 2px solid black;
+}
+/* Form Container and Content */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.form-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin-right: 20px;
+}
+.image-section {
+    margin-bottom: 20px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.resized-textbox, .select-box, .select-box-large {
+    width: calc(100% - 20px);
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 10px;
+}
+.select-box {
+    width: 150px;
+}
+.select-box-large {
+    width: 250px;
+}
+.button {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: var(--accent-color);
+    border-color: black;
+}
+.macros-table {
+  table-layout: fixed;
+  width: 1000px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.food-items-table {
+  table-layout: fixed;
+  width: 1000px;
+  border: 1px solid black;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: black;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+
+
